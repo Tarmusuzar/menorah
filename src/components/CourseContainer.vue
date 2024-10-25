@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="category mainCategory">Best Selling Courses</h1>
+    <h1 class="category mainCategory"> Finance Courses</h1>
 
     <div class="course-container" ref="courseContainer" :class="{ 'verticalDisplay': cat1 }">
       <div v-for="(course, index) in displayedCourses" :key="index" class="course-item" @click="$router.push('/course/'+course.id)">
@@ -22,27 +22,7 @@
   </div>
 
 
-  <div>
-    <h1 class="category">Office Jobs Courses</h1>
-
-    <div class="course-container" ref="courseContainer" :class="{ 'verticalDisplay': cat2 }">
-      <div v-for="(course, index) in officeJobs" :key="index" class="course-item" @click="$router.push('/course/'+course.id)">
-        <img :src="require(`@/assets/${course.image}`)" :alt="course.title" class="course-image">
-        <div class="course-details">
-          <h2 class="course-title">{{ course.title }}</h2>
-          <p class="course-description">{{ course.description }}</p>
-          <div class="course-meta">
-            <span class="course-level" style="min-width: 6rem; text-align: center;">Enroll Now</span>
-            <span class="course-rating">{{ course.rating }} <i class="fas fa-star" style="color: green;"></i></span>
-            <span class="course-students">{{ course.students }} <i class="fas fa-user-graduate"></i></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 100%; display: flex; justify-content: center;">
-      <button v-if="!cat2" @click="cat2 = true" class="view-more-btn">View More</button>
-    </div>
-  </div>
+  
 
 
   <div>
@@ -63,7 +43,7 @@
       </div>
     </div>
     <div style="width: 100%; display: flex; justify-content: center;">
-      <button v-if="!cat3" @click="cat3 = true" class="view-more-btn">View More</button>
+
     </div>
   </div>
 </template>
